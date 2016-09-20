@@ -1,0 +1,10 @@
+sudo: required
+
+before_script:
+  - docker-compose up --build -d
+
+script:
+  - ./test.sh
+
+after_script:
+  - docker-compose down
