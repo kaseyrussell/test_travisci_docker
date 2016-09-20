@@ -5,3 +5,15 @@ services:
     ports:
      - "5001:5000"
     container_name: foo_1
+
+  elasticsearch:
+    image: elasticsearch:2.2.0
+    volumes:
+      - "./docker/elasticsearch/config:/usr/share/elasticsearch/config"
+      - "./docker/elasticsearch/data:/data"
+    command: elasticsearch
+    container_name: travis_elasticsearch
+    hostname: elasticsearch
+    ports:
+      - "19200:9200"
+      - "19300:9300"
