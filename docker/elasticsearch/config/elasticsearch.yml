@@ -1,0 +1,4 @@
+network.host: 0.0.0.0
+script.groovy.sandbox.enabled: true
+script.inline: on
+script.indexed: on

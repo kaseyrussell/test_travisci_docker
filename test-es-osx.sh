@@ -1,7 +1,7 @@
 #!/bin/sh
 set -e
 expected='{
-  "name" : "Richard Parker",
+  "name" : "Fantomex",
   "cluster_name" : "elasticsearch",
   "version" : {
     "number" : "2.2.0",
@@ -12,6 +12,7 @@ expected='{
   },
   "tagline" : "You Know, for Search"
 }'
+
 actual=`curl -XGET 192.168.99.100:19200`
 echo "Expecting: $expected"
 echo "Server says: $actual"
