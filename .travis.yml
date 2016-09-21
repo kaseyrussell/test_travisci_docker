@@ -12,7 +12,7 @@ before_script:
 
 script:
   - ./test.sh
-  - ./test-es.sh
+  - ./test-es-v2.sh
 
 after_script:
   - docker-compose down
