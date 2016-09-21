@@ -1,7 +1,7 @@
 #!/bin/sh
 set -e
 expected="Hello World"
-actual=`nc -v localhost 5001`
+actual=`nc -v ${DOCKER_IP} 5001`
 echo "Expecting: $expected"
 echo "Server says: $actual"
 if [ "$expected" != "$actual" ]; then

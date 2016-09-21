@@ -3,12 +3,18 @@ sudo: required
 services:
   - docker
 
+env:
+  matrix:
+    - DOCKER_IP=localhost
+    - DOCKER_IP=0.0.0.0
+    - DOCKER_IP=127.0.0.1
+
 before_install:
   - sudo pip install docker-compose
 
 before_script:
   - docker-compose up --build -d
-  - sleep 15
+  - sleep 120
 
 script:
   - ./test.sh
